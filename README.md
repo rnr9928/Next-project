@@ -1,7 +1,7 @@
 ## Front
-Next.js  /n
-Typescript
-taillwind
+'Next.js'
+'Typescript'
+'taillwind'
 ## BACK
-Next auth
-Mongo DB
+'Next auth'
+'Mongo DB'
