@@ -1,5 +1,5 @@
 ## Front
-Next.js
+Next.js  /n
 Typescript
 taillwind
 ## BACK
