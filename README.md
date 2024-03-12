@@ -18,3 +18,6 @@ Mongo DB
 블록옮기기 해결  
 로그인 인증방식추가(google)  
 Next auth , Mongo DB
+
+### 0313
+라이브블록 적용  
