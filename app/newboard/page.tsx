@@ -6,8 +6,10 @@ import { createBoard } from "../action/boardAction"
 export default  function NewPage() {
    async function handleNewBoard(formData: FormData ) {
         const boardName = formData.get('name')?.toString()|| ''
-        const {id} = await createBoard(boardName)
-        redirect(`/boards/${id}`)
+        const roomInfo = await createBoard(boardName)
+        if(roomInfo){
+            redirect(`/boards/${roomInfo.id}`)
+        }
     }
 
     return (

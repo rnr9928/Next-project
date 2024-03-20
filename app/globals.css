@@ -2,8 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+
 body{
     background-color: #f6f7fb;
+    font-family: Jua-Regular,sans-serif
+}
+@font-face {
+    font-family: "Jua-Regular";
+    font-weight: 200;
+    src: url("../../public/fonts/Jua-Regular.ttf");
 }
 
 button.submit,
@@ -27,7 +34,7 @@ button.with-icon{
 }
 
 
-
+/* 라이브블록 기능 css */
 .collaboration-cursor__caret {
     border-left: 1px solid #0d0d0d;
     border-right: 1px solid #0d0d0d;
