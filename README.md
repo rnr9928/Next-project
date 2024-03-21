@@ -69,33 +69,10 @@ next-auth 페이지   -> Providers -> Google
 
 ![logo-liveblocks-organization-schema](https://github.com/rnr9928/Next-project/assets/97073355/053bdc44-8d66-4f36-9b8f-4530c48bacde)  
 
-liveblocks은 실시간 협업 기능들을 중점에 둔 라이브러리 입니다
+liveblocks은 실시간 협업 기능들을 중점에 둔 라이브러리 입니다  
 
-```
-export async function createBoard(name: string):Promise<false | RoomInfo>{
-
-const liveblocks = new Liveblocks({
-  secret: process.env.LIVEBLOCKS_SECRET_KEY || '',
-});
-const session = await getServerSession(authOptions)
-const email = session?.user?.email || ''
-
-if (email){
-    const roomId = uniqid.time()
-    return await liveblocks.createRoom(roomId,{
-    defaultAccesses: [],
-    usersAccesses: {
-        [email] : ['room:write']
-    },
-    metadata:{
-        boardName:name,
-    }
-})
-}
-    return false
-}
-```
-getServerSession함수로 사용자의 이메일 주소를 가져옵니다
+![화면 캡처 2024-03-21 210451](https://github.com/rnr9928/Next-project/assets/97073355/8d1bfcfa-4555-424a-bba5-e381d3715b72)
+getServerSession함수로 사용자의 이메일 주소를 가져옵니다  
 구글에 인증된 메일이 있을시 unqid.time()를 이용해 현재 시각 기준으로 고유한 방 id를 생성하고
 없을 경우 false로 리턴했습니다  
 
