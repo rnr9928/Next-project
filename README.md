@@ -60,6 +60,6 @@ npm install next-auth
 <br><br><br><br>
 
 ![화면 캡처 2024-03-21 151152](https://github.com/rnr9928/Next-project/assets/97073355/c6f8a713-2e40-46ac-91d1-8136c833efe9)  
-로그인 페이지 만들어서 signIn 함수를 import하시면 완성
+로그인 페이지 만들어서 signIn 함수를 import하면 완성
 
 <br><br><br><br>
