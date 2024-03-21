@@ -46,7 +46,8 @@ npm install next-auth
 구글뿐만 아니라 네이버 , 카카오, 인스타그램 등등 여러 로그인 인증기반이 있습니다  
 <br><br><br><br>
 
-![화면 캡처 2024-03-21 145454](https://github.com/rnr9928/Next-project/assets/97073355/9843ceb5-f1f7-4f8a-9e01-1169f890d609)
+![화면 캡처 2024-03-21 150056](https://github.com/rnr9928/Next-project/assets/97073355/9af145e5-638b-46ae-96f0-c350f4d89be2)
+
 
 구글 클라우드에 들어가서 프로젝트를 생성한 다음 
 사용하고 있는 주소를 추가  
