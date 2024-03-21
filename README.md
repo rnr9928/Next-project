@@ -71,9 +71,13 @@ next-auth 페이지   -> Providers -> Google
 
 liveblocks은 실시간 협업 기능들을 중점에 둔 라이브러리 입니다  
 
-![화면 캡처 2024-03-21 210451](https://github.com/rnr9928/Next-project/assets/97073355/8d1bfcfa-4555-424a-bba5-e381d3715b72)
+![화면 캡처 2024-03-21 210451](https://github.com/rnr9928/Next-project/assets/97073355/8d1bfcfa-4555-424a-bba5-e381d3715b72)  
 getServerSession함수로 사용자의 이메일 주소를 가져옵니다  
 구글에 인증된 메일이 있을시 unqid.time()를 이용해 현재 시각 기준으로 고유한 방 id를 생성하고
 없을 경우 false로 리턴했습니다  
 
-[ getServerSession 함수는 NextAuth에서 제공되는 함수중 하나로 서버측에서 세션을 가져오는데 쓰입니다 ]
+[ getServerSession 함수는 NextAuth에서 제공되는 함수중 하나로 서버측에서 세션을 가져오는데 쓰입니다 ]  
+
+![화면 캡처 2024-03-21 211025](https://github.com/rnr9928/Next-project/assets/97073355/99de92b6-1634-4701-adbb-4c5b672c6485)  
+liveblock 프로젝트 페이지에서 유저 정보를 확인할 수 있습니다
+
