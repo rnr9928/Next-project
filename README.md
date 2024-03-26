@@ -114,3 +114,10 @@ liveblocks.getRoom(boardId)를 호출하여 boardId 에 해당하는 정보를 �
 
 usersAccesses[email] = ['room:write'] 는 liveblocks의 기능입니다 초대된 이메일에 쓰기 권한을 가질 수 있습니다
 
+
+ 
+### drag and drop 문제점 & 라이브러리 사용
+처음에는 drag and drop 기능을 바닐라로 직접 구현하려 했으나 드래그로 옮기는 도중  
+DOM을 변경하고 드래그가 끝나기 전에 도착지점을 변경하는 것이 아직 나에겐 어려운 수준이여서
+(DOM 위치가 바뀌면 바뀐 위치를 기준으로 동작하기 때문에 계산하기 어렵다,..)  
+라이브러리 사용을 결정하고 react.sortable을 사용하여 drag and drop 기능을 구현
