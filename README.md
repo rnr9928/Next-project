@@ -56,7 +56,7 @@ next-auth 페이지   -> Providers -> Google
 ![화면 캡처 2024-03-21 150632](https://github.com/rnr9928/Next-project/assets/97073355/cf19494a-ed6a-48cc-be1e-18cd9a707224)
 
 아까 생성한 경로 파일에  클라이언트 id와 password를 .env파일에 넣고
-적용하면 끝  
+적용  
 <br><br>
 
 ![화면 캡처 2024-03-21 151152](https://github.com/rnr9928/Next-project/assets/97073355/c6f8a713-2e40-46ac-91d1-8136c833efe9)  
@@ -80,4 +80,37 @@ getServerSession함수로 사용자의 이메일 주소를 가져옵니다
 
 ![화면 캡처 2024-03-21 211025](https://github.com/rnr9928/Next-project/assets/97073355/99de92b6-1634-4701-adbb-4c5b672c6485)  
 liveblock 프로젝트 페이지에서 유저 정보를 확인할 수 있습니다
+
+
+## 초대하기  
+![화면 캡처 2024-03-26 223129](https://github.com/rnr9928/Next-project/assets/97073355/6efc0cd6-5ba3-4c07-bbb8-e782b5148e2a)  
+
+이메일을 추가해서 자신의 작업물에 초대할수 있습니다  
+```
+export default function NewBoardSetting({boardId}:{boardId:string}){
+    const router = useRouter()
+    const inputRef = useRef<HTMLInputElement>(null)
+   async function actionEamil(formData: FormData){
+        const email = formData.get('email')?.toString() || ''
+        await AddEmail(boardId,email)
+        if(inputRef.current){
+            inputRef.current.value =''
+        }
+        router.refresh()
+    }
+```
+input에서 입력된 값이 들어갈 예정이므로 useRef() 타입에 제너릭으로 설정했습니다  
+이메일은 FormData의 기능을 사용하여 email필드를 가져와 문자열로 변환 없으면 빈문자열  
+```
+export async function AddEmail(boardId:string, email:string){
+    const room = await liveblocks.getRoom(boardId)
+    const usersAccesses = room.usersAccesses
+    usersAccesses[email] = ['room:write']
+    await liveblocks.updateRoom(boardId,{usersAccesses})
+    return true
+}
+```
+liveblocks.getRoom(boardId)를 호출하여 boardId 에 해당하는 정보를 가져오고 room에 할당  
+
+usersAccesses[email] = ['room:write'] 는 liveblocks의 기능입니다 초대된 이메일에 쓰기 권한을 가질 수 있습니다
 
